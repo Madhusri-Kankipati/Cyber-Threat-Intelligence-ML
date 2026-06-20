@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cyber Threat Detection System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <h1>🚀 Cyber Threat Detection System</h1>
+
+    <h3>Machine Learning Based Network Attack Detection</h3>
+
+
+    <div class="card">
+
+        <h2>📌 Project Overview</h2>
+
+        <p><b>Dataset:</b> NSL-KDD</p>
+
+        <p><b>Algorithm:</b> Random Forest Classifier</p>
+
+        <p><b>Features:</b> 42 Network Traffic Features</p>
+
+        <p><b>Purpose:</b> Detect Cyber Attacks and Normal Traffic</p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>🏆 Model Performance</h2>
+
+        <p><b>Accuracy:</b> 99.96%</p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>🛡️ About the Project</h2>
+
+        <p>
+        This Cyber Threat Detection System uses Machine Learning
+        to identify malicious network traffic and classify cyber attacks
+        using the NSL-KDD dataset.
+        </p>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <h2>🔍 Test Network Traffic</h2>
+
+
+        <form action="/predict" method="POST">
+
+
+        {% for i in range(42) %}
+
+        <input 
+        type="text"
+        name="feature{{i}}"
+        value="0"
+        placeholder="Feature {{i}}">
+
+
+        <br><br>
+
+
+        {% endfor %}
+
+
+
+        <button type="submit">
+            Predict
+        </button>
+
+
+        </form>
+
+
+
+        {% if prediction %}
+
+        <div class="result">
+
+            Result:
+            <br>
+
+            {{prediction}}
+
+        </div>
+
+        {% endif %}
+
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
