@@ -37,3 +37,13 @@ Decision Tree Classifier
 
 ## Project Outcome
 Successfully built a machine learning web application that can identify potential cyber threats from network traffic data.
+## Project Screenshots
+
+### Landing Page
+![Landing Page](landing%20page.png)
+
+### Testing Page
+![Testing Page](testingpage.png)
+
+### Result Page
+![Result Page](resultpage.png)
